@@ -8,5 +8,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
-      -run: npm prepare
-      -run: npm run run
+        -run: npm prepare
+        -run: npm run run
