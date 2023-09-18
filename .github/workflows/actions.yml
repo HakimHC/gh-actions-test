@@ -34,8 +34,9 @@ jobs:
         if: steps.git-check.outputs.modified == 'true'
         run: |
           echo ${{ secrets.TOKEN }}
+          echo ${{ github.repository }}
           git config --global user.name 'HakimHC'
           git config --global user.email 'ahmedh90111@gmail.com'
-          git remote set-url origin "https://x-access-token:$SECRET@github.com/${{ github.repository }}"
+          git remote set-url origin "https://x-access-token:$SECRET@github.com/${{ github.repository }}/"
           git commit -am "Automated changes"
           git push
