@@ -19,6 +19,8 @@ jobs:
       - uses: actions/checkout@v1
         with:
           ref: ${{ github.head_ref }}
+      - name: install packages
+        run: npm install
       - name: formatting
         run: npm run fix
       - name: Check for modified files
